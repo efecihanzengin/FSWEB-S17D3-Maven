@@ -1,4 +1,5 @@
 package com.workintech.s17d2;
+import com.workintech.s17d2.ResultAnalyzer;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
@@ -55,7 +56,7 @@ public class ResultAnalyzer implements TestWatcher, AfterAllCallback{
         long failure = summary.get(TestResultStatus.FAILED) != null ? summary.get(TestResultStatus.FAILED) : 0;
 
         double score = (double) success / (success + failure);
-        String userId = "999999";
+        String userId = "301027";
 
         JSONObject json = new JSONObject();
         json.put("score", score);
